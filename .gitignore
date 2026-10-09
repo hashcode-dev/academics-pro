@@ -1,4 +1,5 @@
 _cacache
+_logs
 .agents
 .next
 node_modules

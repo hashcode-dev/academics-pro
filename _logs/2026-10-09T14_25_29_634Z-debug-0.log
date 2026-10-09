@@ -10,3 +10,9 @@
 9 verbose logfile logs-max:10 dir:/Users/gauravsahu/fe_workspace/academics-pro/_logs/2026-10-09T14_25_29_634Z-
 10 verbose logfile /Users/gauravsahu/fe_workspace/academics-pro/_logs/2026-10-09T14_25_29_634Z-debug-0.log
 11 silly logfile done cleaning log files
+12 verbose cwd /Users/gauravsahu/fe_workspace/academics-pro
+13 verbose os Darwin 25.6.0
+14 verbose node v22.22.0
+15 verbose npm  v10.9.4
+16 verbose exit 0
+17 info ok
