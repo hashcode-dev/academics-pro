@@ -54,9 +54,17 @@ export default function TenantSchoolPage() {
   const [cmsData, setCmsData] = useState<any>(null);
 
   useEffect(() => {
-    fetchJson<any>("/cms/landing?tenantId=apex-high").then((data) => {
-      setCmsData(data);
-    });
+    fetchJson<any>("/cms/tenant/apex-high")
+      .then((feed) => {
+        if (feed) {
+          setCmsData(feed);
+        }
+      })
+      .catch(() => {
+        fetchJson<any>("/cms/landing?tenantId=apex-high").then((data) => {
+          setCmsData(data);
+        });
+      });
   }, []);
 
   const {

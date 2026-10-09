@@ -97,14 +97,189 @@ function getMockFallback<T>(url: string): T {
     } as unknown as T;
   }
 
-  if (url.includes("/finance/summary")) {
+  if (url.includes("/institution/overview")) {
     return {
-      totalFeeTarget: 4500000,
-      collectedFees: 3890250,
-      pendingFees: 609750,
-      collectionRatePercentage: 86.4,
-      monthlyPayrollDisbursed: 285400,
-      defaultersCount: 14,
+      tenantId: "apex-high",
+      totalCampuses: 2,
+      totalStudentCapacity: 1750,
+      currentAcademicYear: "Academic Year 2026–2027",
+      currentTerm: "Fall Term 1",
+      totalClasses: 3,
+      totalSections: 5,
+      totalSubjects: 5,
+      totalClassrooms: 4,
+    } as unknown as T;
+  }
+
+  if (url.includes("/institution/campuses")) {
+    return [
+      {
+        id: "cmp-apex-main",
+        tenantId: "apex-high",
+        name: "Main Cambridge Campus",
+        code: "CAM-MAIN",
+        address: "742 Evergreen Crest, Cambridge, MA 02138",
+        contactPhone: "+1 (555) 382-9011",
+        contactEmail: "cambridge@apexhigh.edu",
+        studentCapacity: 1400,
+        gradesOffered: "Pre-K through Grade 12",
+        active: true,
+      },
+      {
+        id: "cmp-apex-annex",
+        tenantId: "apex-high",
+        name: "Apex Innovation Annex & STEM Lab",
+        code: "CAM-ANNEX",
+        address: "18 Tech Commons, Cambridge, MA 02139",
+        contactPhone: "+1 (555) 382-9015",
+        contactEmail: "innovation@apexhigh.edu",
+        studentCapacity: 350,
+        gradesOffered: "Grade 9–12 (Robotics & AI Atelier)",
+        active: true,
+      },
+    ] as unknown as T;
+  }
+
+  if (url.includes("/institution/academic-years")) {
+    return [
+      {
+        id: "ay-2026-2027",
+        tenantId: "apex-high",
+        name: "Academic Year 2026–2027",
+        code: "AY2627",
+        startDate: "2026-08-25",
+        endDate: "2027-05-28",
+        status: "CURRENT",
+        terms: [
+          { id: "trm-1", termName: "Fall Term 1", termNumber: 1, startDate: "2026-08-25", endDate: "2026-12-18", examStartDate: "2026-12-10", examEndDate: "2026-12-17", status: "CURRENT" },
+          { id: "trm-2", termName: "Spring Term 2", termNumber: 2, startDate: "2027-01-12", endDate: "2027-05-28", examStartDate: "2027-05-18", examEndDate: "2027-05-26", status: "UPCOMING" },
+        ],
+      },
+    ] as unknown as T;
+  }
+
+  if (url.includes("/institution/classes")) {
+    return [
+      {
+        id: "cls-g10",
+        name: "Grade 10",
+        stage: "Middle/Upper",
+        displayOrder: 10,
+        sections: [
+          { id: "sec-10a", name: "A", roomNumber: "Room 201", maxCapacity: 25, currentEnrollment: 24, classTeacherName: "Marcus Brody" },
+          { id: "sec-10b", name: "B", roomNumber: "Room 202", maxCapacity: 25, currentEnrollment: 23, classTeacherName: "Liam O'Connor" },
+        ],
+      },
+      {
+        id: "cls-g11",
+        name: "Grade 11",
+        stage: "Senior (IB DP / AP)",
+        displayOrder: 11,
+        sections: [
+          { id: "sec-11a", name: "A", roomNumber: "Room 301", maxCapacity: 25, currentEnrollment: 25, classTeacherName: "Sarah Lin" },
+          { id: "sec-11b", name: "B", roomNumber: "Room 302", maxCapacity: 25, currentEnrollment: 24, classTeacherName: "Dr. Alistair Cook" },
+        ],
+      },
+      {
+        id: "cls-g12",
+        name: "Grade 12",
+        stage: "Senior (IB DP / AP)",
+        displayOrder: 12,
+        sections: [
+          { id: "sec-12a", name: "A", roomNumber: "Room 401", maxCapacity: 25, currentEnrollment: 22, classTeacherName: "Dr. Arthur Vance" },
+        ],
+      },
+    ] as unknown as T;
+  }
+
+  if (url.includes("/institution/subjects")) {
+    return [
+      { id: "sbj-1", code: "MATH-BC", name: "Calculus BC (AP)", department: "Mathematics", curriculum: "AP", credits: 4, weeklyHours: 5 },
+      { id: "sbj-2", code: "IB-PHYS-HL", name: "Physics Higher Level", department: "Physical Sciences", curriculum: "IB DP", credits: 4, weeklyHours: 6 },
+      { id: "sbj-3", code: "IB-CHEM-HL", name: "Chemistry Higher Level", department: "Physical Sciences", curriculum: "IB DP", credits: 4, weeklyHours: 5 },
+      { id: "sbj-4", code: "ENG-LIT-AP", name: "English Literature & Composition", department: "Humanities", curriculum: "AP", credits: 3, weeklyHours: 4 },
+      { id: "sbj-5", code: "STEM-AI", name: "Applied Robotics & Machine Intelligence", department: "Computer Science", curriculum: "STEM Atelier", credits: 4, weeklyHours: 5 },
+    ] as unknown as T;
+  }
+
+  if (url.includes("/institution/classrooms")) {
+    return [
+      { id: "rm-1", campusId: "cmp-apex-main", roomNumber: "Lab 301", name: "Calculus & Advanced Analytics Lab", roomType: "LABORATORY", capacity: 28 },
+      { id: "rm-2", campusId: "cmp-apex-main", roomNumber: "Phys Lab 1", name: "Newtonian & Quantum Mechanics Atelier", roomType: "LABORATORY", capacity: 26 },
+      { id: "rm-3", campusId: "cmp-apex-main", roomNumber: "Hall B", name: "Humanities Lecture Hall B", roomType: "LECTURE_HALL", capacity: 60 },
+      { id: "rm-4", campusId: "cmp-apex-annex", roomNumber: "Turing Lab", name: "Turing AI & Prototyping Workshop", roomType: "LABORATORY", capacity: 32 },
+    ] as unknown as T;
+  }
+
+  if (url.includes("/cms/tenant") || url.includes("/cms/feed")) {
+    return {
+      id: "feed-apex-high",
+      tenantId: "apex-high",
+      tenantSlug: "apex-high",
+      institutionName: "Apex High School",
+      tagline: "Shaping World-Class Thinkers and Compassionate Global Leaders",
+      logoUrl: "/logos/apex-high.svg",
+      primaryColor: "#004bca",
+      contactEmail: "admissions@apexhigh.edu",
+      contactPhone: "+1 (555) 382-9011",
+      campusAddress: "742 Evergreen Crest, Cambridge, MA 02138",
+      hero: {
+        headline: "Empowering Tomorrow's Pioneers, Thinkers & Leaders",
+        subhead: "An elite K-12 preparatory academy offering International Baccalaureate (IB) Diploma and AP Capstone pathways in Cambridge, MA.",
+        primaryCtaText: "Book a Campus Tour",
+        primaryCtaLink: "/school#admissions",
+        secondaryCtaText: "Explore Academic Curricula",
+        secondaryCtaLink: "/school#academics",
+        badgeText: "Top 1% Global STEM & Humanities Ranking",
+        badgeHighlight: "100% IB Diploma Pass Rate",
+        statsHighlights: [
+          "98.4% Placement to Top 30 Global Universities",
+          "1:8 Faculty-to-Student Mentorship Ratio",
+          "45+ Advanced Research Labs & Creative Studios",
+        ],
+      },
+      programs: [
+        { id: "prog-early", name: "Early Learning & Discovery Atelier", code: "PROG-EY", level: "Early Childhood", ageGroup: "Ages 3–5", description: "Play-based inquiry grounded in Reggio Emilia and Montessori philosophies fostering curiosity.", highlights: ["Bilingual Immersion", "Nature Exploratorium"], accreditation: "NAEYC Certified", coordinatorName: "Elena Rostova", badgeColor: "#007f57" },
+        { id: "prog-my", name: "Middle Years IB Exploration", code: "PROG-MYP", level: "Middle School", ageGroup: "Grades 6–8", description: "Rigorous interdisciplinary curriculum designed to cultivate global mindedness and analytical thought.", highlights: ["Design Thinking Labs", "Community Action Projects"], accreditation: "IB World School MYP", coordinatorName: "Dr. Marcus Brody", badgeColor: "#004bca" },
+        { id: "prog-diploma", name: "Senior IB Diploma & AP Capstone", code: "PROG-IBDP", level: "Senior Secondary", ageGroup: "Grades 9–12", description: "Pre-university standard emphasizing deep research, Theory of Knowledge, and extended essays.", highlights: ["100% Pass Rate", "Average Score 38.6 / 45"], accreditation: "IB World School DP & AP College Board", coordinatorName: "Dr. Arthur Vance", badgeColor: "#5b21b6" },
+      ],
+      testimonials: [
+        { id: "tst-1", authorName: "Julian Voss", role: "Alumnus, Class of 2024", cohortYear: "2024", quote: "Apex High's robotics atelier and faculty mentorship gave me the confidence to publish independent AI research before college.", universityBadge: "MIT '28 - EECS", rating: 5.0 },
+        { id: "tst-2", authorName: "Dr. Catherine Sterling", role: "Parent of 11th Grader", cohortYear: "2026", quote: "The individual attention each scholar receives is unparalleled. The balance of academic rigor and compassionate care is extraordinary.", universityBadge: "Parent Association Co-Chair", rating: 5.0 },
+        { id: "tst-3", authorName: "Maya Chen", role: "Senior Scholar", cohortYear: "2025", quote: "Between competitive debate, chamber orchestra, and AP Calculus, every day challenges me to grow beyond my expectations.", universityBadge: "Stanford '29 Admit", rating: 5.0 },
+      ],
+      facilities: [
+        { id: "fac-stem", name: "Turing Quantum & Robotics Atelier", category: "STEM", description: "State-of-the-art makerspace equipped with laser cutters, 6-axis robotic arms, and NVIDIA RTX clusters.", features: ["Rapid Prototyping", "Autonomous Drones Bay"] },
+        { id: "fac-aquatics", name: "Olympic Aquatics & Athletic Pavilion", category: "Athletics", description: "50-meter indoor heated competition pool, dual hardwood basketball courts, and sports science performance gym.", features: ["FINA Compliant", "Hydrotherapy Suite"] },
+        { id: "fac-theater", name: "Blackbox & Symphony Auditorium", category: "Arts", description: "550-seat acoustically engineered theater designed for musical theater, orchestra recitals, and public debates.", features: ["Steinway Grand Pianos", "DMX Lighting Grid"] },
+      ],
+      admissionSteps: [
+        { stepNumber: 1, title: "Submit Online Application", deadline: "Rolling until Dec 15", description: "Complete parent questionnaire and upload previous two academic transcripts via our secure portal.", requirements: ["Transcripts", "Birth Certificate"] },
+        { stepNumber: 2, title: "Scholar Assessment & Inquiry Day", deadline: "January 10–25", description: "Prospective students participate in collaborative classroom sessions and cognitive problem-solving ateliers.", requirements: ["On-site Assessment", "Creative Essay"] },
+        { stepNumber: 3, title: "Family Leadership Interview", deadline: "February 1–15", description: "Personal 30-minute conversation with our Academic Dean to align educational values and passions.", requirements: ["Family Dialogue", "Student Passions Pitch"] },
+        { stepNumber: 4, title: "Decision & Enrollment", deadline: "March 10", description: "Formal admission offers issued with merit scholarship notifications and comprehensive onboarding guide.", requirements: ["Deposit", "Course Selection"] },
+      ],
+      events: [
+        { id: "evt-1", title: "Fall Open Campus & Innovation Showcase", category: "Open Day", eventDate: "2026-10-24", time: "09:00 AM – 01:00 PM EST", location: "Main Cambridge Campus, Auditorium A", description: "Tour campus facilities, attend live lab demos, and meet Academic Heads of Department.", rsvpUrl: "/school/rsvp/open-day", featured: true },
+        { id: "evt-2", title: "New England Regional Robotics Invitational", category: "Academic Olympiad", eventDate: "2026-11-14", time: "10:00 AM – 05:00 PM EST", location: "Apex Innovation Annex", description: "Hosting 28 regional schools competing in autonomous robotics challenges.", rsvpUrl: "/school/rsvp/robotics", featured: false },
+      ],
+      news: [
+        { id: "news-1", title: "Apex High Students Win 1st Place at Harvard Model Congress", slug: "apex-high-harvard-model-congress-win", publishedDate: "2026-09-28", summary: "Our debate delegation swept gavel awards across Senate, Supreme Court, and National Security Council committees.", body: "Over the past weekend...", author: "Communications Office", tags: ["Debate", "Excellence"] },
+      ],
+      version: 1,
+      publishedAt: new Date().toISOString(),
+      publishedBy: "system-init",
+    } as unknown as T;
+  }
+
+  if (url.includes("/cms/publish")) {
+    return {
+      tenantId: "apex-high",
+      tenantSlug: "apex-high",
+      version: 2,
+      publishedAt: new Date().toISOString(),
+      status: "PUBLISHED",
+      message: "Website feed successfully compiled and published for Apex High School",
     } as unknown as T;
   }
 
