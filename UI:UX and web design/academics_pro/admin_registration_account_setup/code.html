@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuietAdmin - Administrator Account Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#e2dfff",
+                    "on-tertiary-fixed-variant": "#4e556f",
+                    "on-secondary-fixed-variant": "#5c5b5f",
+                    "on-tertiary-fixed": "#323951",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#2a3439",
+                    "surface-container-low": "#f0f4f7",
+                    "inverse-surface": "#0b0f10",
+                    "surface-container": "#e8eff3",
+                    "secondary-dim": "#545256",
+                    "on-surface": "#2a3439",
+                    "primary-dim": "#4034d7",
+                    "surface-dim": "#cfdce3",
+                    "on-primary-fixed-variant": "#4a40e0",
+                    "on-primary-fixed": "#2a13c5",
+                    "secondary-container": "#e5e1e6",
+                    "surface": "#f7f9fb",
+                    "secondary-fixed": "#e5e1e6",
+                    "on-primary": "#faf6ff",
+                    "tertiary-fixed": "#d2d9f8",
+                    "outline": "#717c82",
+                    "secondary-fixed-dim": "#d7d3d8",
+                    "surface-container-high": "#e1e9ee",
+                    "outline-variant": "#a9b4b9",
+                    "inverse-on-surface": "#9a9d9f",
+                    "on-primary-container": "#3f33d6",
+                    "secondary": "#605e62",
+                    "primary-fixed-dim": "#d2d0ff",
+                    "tertiary-fixed-dim": "#c4cbe9",
+                    "surface-container-highest": "#d9e4ea",
+                    "on-error-container": "#782232",
+                    "on-surface-variant": "#566166",
+                    "primary": "#4d44e3",
+                    "tertiary-container": "#d2d9f8",
+                    "on-secondary-container": "#525155",
+                    "surface-bright": "#f7f9fb",
+                    "surface-tint": "#4d44e3",
+                    "tertiary-dim": "#4b526c",
+                    "on-tertiary": "#faf8ff",
+                    "error": "#9e3f4e",
+                    "background": "#f7f9fb",
+                    "surface-variant": "#d9e4ea",
+                    "inverse-primary": "#8582ff",
+                    "on-error": "#fff7f7",
+                    "error-dim": "#4f0116",
+                    "on-secondary": "#fcf8fc",
+                    "tertiary": "#575e78",
+                    "error-container": "#ff8b9a",
+                    "on-secondary-fixed": "#403f43",
+                    "primary-container": "#e2dfff",
+                    "on-tertiary-container": "#444c65"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .ghost-border { border: 1px solid rgba(169, 180, 185, 0.2); }
+        .primary-gradient { background: linear-gradient(180deg, #4d44e3 0%, #4034d7 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Shell (EduAdmin Portal) -->
+<header class="fixed top-0 left-0 right-0 h-16 flex justify-between items-center px-6 bg-slate-50 dark:bg-slate-900 z-50 transition-colors duration-200">
+<div class="flex items-center gap-3">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-50 tracking-tight">EduAdmin Portal</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-500 hover:bg-slate-200/50 p-2 rounded transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-slate-500 hover:bg-slate-200/50 p-2 rounded transition-colors" data-icon="settings">settings</span>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-surface-container-high bg-surface-container">
+<img alt="Administrator profile avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a professional male administrator in a clean office setting, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8HSk8KkKLP-Po7ly2fGxRmgZOEN3aHr4wNJNQbK5747v6mLrRdWdR0iUcmAWyqZacF9JJppJQDbFdEZsFd4C1TiLiNfksuxxdF7kcChti-uODUHv1IzUPQE9eGAUvZgYVA-b76GlGEBu8khVvRbT5nqcAnGThZV1iUWwrjxDrc7N50DX-jdxZLLrNuz0AGQOOljCYXjSETgjIuP0AHv4Jl01soOf1VBGm4b_9pzEGDglmlezmhJIoENY4gQbbWwwmEUPH4ugcWN8"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex pt-16 min-h-screen">
+<!-- SideNavBar Shell (Onboarding Progress) -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-slate-100 dark:bg-slate-950 flex flex-col py-8 z-40 transition-colors duration-150 border-r-0">
+<div class="px-6 mb-10">
+<div class="text-lg font-black text-indigo-600 mb-1">Onboarding</div>
+<div class="text-xs uppercase tracking-widest text-slate-500 font-semibold">Step 3 of 4</div>
+</div>
+<nav class="flex-1 px-0">
+<ul class="space-y-1">
+<li class="flex items-center px-6 py-3 text-slate-600 dark:text-slate-400 text-sm font-inter hover:text-indigo-500 group transition-colors">
+<span class="material-symbols-outlined mr-3" data-icon="person">person</span>
+                        Account
+                        <span class="ml-auto material-symbols-outlined text-xs text-green-500" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</li>
+<li class="flex items-center px-6 py-3 text-slate-600 dark:text-slate-400 text-sm font-inter hover:text-indigo-500 group transition-colors">
+<span class="material-symbols-outlined mr-3" data-icon="security">security</span>
+                        Security
+                        <span class="ml-auto material-symbols-outlined text-xs text-green-500" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</li>
+<li class="flex items-center px-6 py-3 bg-slate-200/50 text-indigo-600 dark:text-indigo-400 font-bold border-r-2 border-indigo-600 text-sm font-inter">
+<span class="material-symbols-outlined mr-3" data-icon="corporate_fare">corporate_fare</span>
+                        Organization
+                    </li>
+<li class="flex items-center px-6 py-3 text-slate-600 dark:text-slate-400 text-sm font-inter hover:text-indigo-500 group transition-colors opacity-50">
+<span class="material-symbols-outlined mr-3" data-icon="badge">badge</span>
+                        Roles
+                    </li>
+<li class="flex items-center px-6 py-3 text-slate-600 dark:text-slate-400 text-sm font-inter hover:text-indigo-500 group transition-colors opacity-50">
+<span class="material-symbols-outlined mr-3" data-icon="fact_check">fact_check</span>
+                        Review
+                    </li>
+</ul>
+</nav>
+<div class="px-6 mt-auto">
+<div class="p-4 rounded-lg bg-surface-container-high/50">
+<div class="text-[10px] uppercase font-bold text-on-surface-variant mb-2">Registration Progress</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[75%] transition-all duration-500"></div>
+</div>
+<div class="text-[10px] mt-2 text-on-surface-variant text-right">75% Complete</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 bg-surface min-h-screen px-12 py-12 pb-32">
+<div class="max-w-4xl mx-auto">
+<!-- Header -->
+<div class="mb-12">
+<h1 class="text-4xl font-extrabold text-on-surface tracking-tight mb-3">Administrator Account Setup</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl font-light leading-relaxed">
+                        Create the primary administrator account for this institution. This account will have full access to all modules and user management.
+                    </p>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- Section 1: Personal Details -->
+<div class="col-span-12 lg:col-span-7 bg-surface-container-low rounded-xl overflow-hidden">
+<div class="px-8 py-6 bg-surface-container-high">
+<h2 class="text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="badge">badge</span>
+                                Personal Details
+                            </h2>
+</div>
+<div class="p-8 grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">First Name</label>
+<input class="w-full bg-surface-container-lowest border-none ghost-border focus:ring-1 focus:ring-primary focus:ring-offset-2 ring-offset-surface rounded px-4 py-2.5 text-on-surface placeholder:text-outline-variant transition-all" placeholder="e.g. Julian" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Last Name</label>
+<input class="w-full bg-surface-container-lowest border-none ghost-border focus:ring-1 focus:ring-primary focus:ring-offset-2 ring-offset-surface rounded px-4 py-2.5 text-on-surface placeholder:text-outline-variant transition-all" placeholder="e.g. Ashford" type="text"/>
+</div>
+<div class="col-span-2 flex flex-col gap-1.5">
+<label class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Official Email Address</label>
+<input class="w-full bg-surface-container-lowest border-none ghost-border focus:ring-1 focus:ring-primary focus:ring-offset-2 ring-offset-surface rounded px-4 py-2.5 text-on-surface placeholder:text-outline-variant transition-all" placeholder="admin@institution.edu" type="email"/>
+</div>
+<div class="col-span-2 flex flex-col gap-1.5">
+<label class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Phone Number</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">+1</span>
+<input class="w-full bg-surface-container-lowest border-none ghost-border focus:ring-1 focus:ring-primary focus:ring-offset-2 ring-offset-surface rounded pl-10 pr-4 py-2.5 text-on-surface placeholder:text-outline-variant transition-all" placeholder="(555) 000-0000" type="tel"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Role-Based Access (Docked alongside personal details on large screens) -->
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-8">
+<div class="bg-surface-container-low rounded-xl overflow-hidden flex-1">
+<div class="px-8 py-6 bg-surface-container-high">
+<h2 class="text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="admin_panel_settings">admin_panel_settings</span>
+                                    Assigned Role
+                                </h2>
+</div>
+<div class="p-8">
+<div class="bg-primary/5 border border-primary/20 rounded-lg p-5 mb-4">
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase">Super Admin</span>
+<span class="text-primary text-xs font-medium">Default System Role</span>
+</div>
+<p class="text-sm text-on-surface leading-relaxed">
+                                        Full system privileges. Includes user management, fiscal reporting, and module configuration.
+                                    </p>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-green-600 text-sm mt-0.5" data-icon="check">check</span>
+                                        Full User &amp; Student Management
+                                    </li>
+<li class="flex items-start gap-3 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-green-600 text-sm mt-0.5" data-icon="check">check</span>
+                                        Financial Settings &amp; Billing
+                                    </li>
+<li class="flex items-start gap-3 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-green-600 text-sm mt-0.5" data-icon="check">check</span>
+                                        Curriculum &amp; Grade Control
+                                    </li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Section 2: Security & Credentials -->
+<div class="col-span-12 bg-surface-container-low rounded-xl overflow-hidden">
+<div class="px-8 py-6 bg-surface-container-high">
+<h2 class="text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="key">key</span>
+                                Security &amp; Credentials
+                            </h2>
+</div>
+<div class="p-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Username</label>
+<input class="w-full bg-surface-container-lowest border-none ghost-border focus:ring-1 focus:ring-primary focus:ring-offset-2 ring-offset-surface rounded px-4 py-2.5 text-on-surface placeholder:text-outline-variant transition-all" placeholder="j.ashford_edu" type="text"/>
+<span class="text-[10px] text-outline italic">Must be unique within institution.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Password</label>
+<input class="w-full bg-surface-container-lowest border-none ghost-border focus:ring-1 focus:ring-primary focus:ring-offset-2 ring-offset-surface rounded px-4 py-2.5 text-on-surface placeholder:text-outline-variant transition-all" type="password" value="********"/>
+<div class="mt-2 flex gap-1 items-center">
+<div class="h-1 flex-1 bg-green-500 rounded-full"></div>
+<div class="h-1 flex-1 bg-green-500 rounded-full"></div>
+<div class="h-1 flex-1 bg-green-500 rounded-full"></div>
+<div class="h-1 flex-1 bg-surface-container-highest rounded-full"></div>
+<span class="text-[10px] font-bold text-green-600 ml-2">Strong</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Confirm Password</label>
+<input class="w-full bg-surface-container-lowest border-none ghost-border focus:ring-1 focus:ring-primary focus:ring-offset-2 ring-offset-surface rounded px-4 py-2.5 text-on-surface placeholder:text-outline-variant transition-all" type="password" value="********"/>
+</div>
+</div>
+</div>
+<!-- Section 3: Two-Factor Authentication -->
+<div class="col-span-12 bg-surface-container-low rounded-xl overflow-hidden">
+<div class="px-8 py-6 bg-surface-container-high flex justify-between items-center">
+<h2 class="text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="verified_user">verified_user</span>
+                                Two-Factor Authentication (2FA)
+                            </h2>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+<span class="ml-3 text-sm font-medium text-on-surface-variant">Enabled</span>
+</label>
+</div>
+<div class="p-8">
+<p class="text-sm text-on-surface-variant mb-6 font-light">Choose your preferred method for verifying your identity during sign-in.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="group relative p-5 bg-surface-container-lowest rounded-lg border-2 border-primary ring-2 ring-primary/10 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary/10 p-2 rounded text-primary">
+<span class="material-symbols-outlined" data-icon="phonelink_setup">phonelink_setup</span>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="text-sm font-bold text-on-surface mb-1">Authenticator App</div>
+<p class="text-xs text-on-surface-variant">Use Google Authenticator, Authy or similar to generate secure codes.</p>
+</div>
+<div class="group relative p-5 bg-surface-container-lowest rounded-lg ghost-border hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-on-surface-variant/10 p-2 rounded text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="sms">sms</span>
+</div>
+</div>
+<div class="text-sm font-bold text-on-surface mb-1">SMS Verification</div>
+<p class="text-xs text-on-surface-variant">Receive a one-time code via text message to your registered phone.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Progress Stepper Footer -->
+<footer class="fixed bottom-0 left-64 right-0 h-20 bg-surface-container-lowest border-t-0 shadow-[0_-8px_20px_-10px_rgba(77,68,227,0.1)] px-12 flex items-center justify-between z-50">
+<button class="flex items-center gap-2 px-6 py-2.5 rounded text-on-surface-variant hover:bg-surface-container-low transition-all font-medium text-sm">
+<span class="material-symbols-outlined text-lg" data-icon="arrow_back">arrow_back</span>
+                Previous Step
+            </button>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-1.5 mr-6">
+<div class="w-2 h-2 rounded-full bg-primary/20"></div>
+<div class="w-2 h-2 rounded-full bg-primary/20"></div>
+<div class="w-6 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+</div>
+<button class="primary-gradient text-on-primary px-8 py-2.5 rounded-lg font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 active:scale-[0.98] transition-all flex items-center gap-2">
+                    Save &amp; Continue
+                    <span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Onboarding - Curriculum &amp; Subjects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#d2d9f8",
+                    "tertiary-dim": "#4b526c",
+                    "secondary-fixed": "#e5e1e6",
+                    "inverse-primary": "#8582ff",
+                    "surface-dim": "#cfdce3",
+                    "on-secondary": "#fcf8fc",
+                    "on-primary-container": "#3f33d6",
+                    "on-tertiary": "#faf8ff",
+                    "primary": "#4d44e3",
+                    "on-primary": "#faf6ff",
+                    "inverse-surface": "#0b0f10",
+                    "inverse-on-surface": "#9a9d9f",
+                    "tertiary-fixed-dim": "#c4cbe9",
+                    "surface-variant": "#d9e4ea",
+                    "primary-container": "#e2dfff",
+                    "on-error": "#fff7f7",
+                    "error-container": "#ff8b9a",
+                    "on-background": "#2a3439",
+                    "on-surface": "#2a3439",
+                    "surface-tint": "#4d44e3",
+                    "surface-container": "#e8eff3",
+                    "on-secondary-container": "#525155",
+                    "background": "#f7f9fb",
+                    "surface-container-high": "#e1e9ee",
+                    "outline-variant": "#a9b4b9",
+                    "on-primary-fixed": "#2a13c5",
+                    "surface-container-low": "#f0f4f7",
+                    "secondary-container": "#e5e1e6",
+                    "primary-fixed": "#e2dfff",
+                    "outline": "#717c82",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f7f9fb",
+                    "surface-container-highest": "#d9e4ea",
+                    "on-surface-variant": "#566166",
+                    "tertiary": "#575e78",
+                    "on-error-container": "#782232",
+                    "on-tertiary-container": "#444c65",
+                    "secondary": "#605e62",
+                    "on-secondary-fixed-variant": "#5c5b5f",
+                    "primary-fixed-dim": "#d2d0ff",
+                    "error": "#9e3f4e",
+                    "on-tertiary-fixed-variant": "#4e556f",
+                    "tertiary-container": "#d2d9f8",
+                    "secondary-dim": "#545256",
+                    "on-secondary-fixed": "#403f43",
+                    "error-dim": "#4f0116",
+                    "primary-dim": "#4034d7",
+                    "on-tertiary-fixed": "#323951",
+                    "surface": "#f7f9fb",
+                    "on-primary-fixed-variant": "#4a40e0",
+                    "secondary-fixed-dim": "#d7d3d8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #d9e4ea; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background text-on-surface flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="flex flex-col h-screen w-64 bg-slate-100 dark:bg-slate-900 border-r border-slate-200/20 dark:border-slate-800/20 fixed left-0 top-0 z-50">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 bg-primary rounded flex items-center justify-center text-on-primary shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<div>
+<h1 class="text-lg font-black text-indigo-700 dark:text-indigo-300 leading-tight">Institution Setup</h1>
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Onboarding Progress: 40%</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="group flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+<span class="text-sm font-medium">Infrastructure</span>
+</a>
+<a class="group flex items-center gap-3 px-3 py-2 text-indigo-600 dark:text-indigo-400 border-r-2 border-indigo-600 dark:border-indigo-400 bg-white/50 dark:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-sm font-semibold">Curriculum</span>
+</a>
+<a class="group flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+<span class="text-sm font-medium">Class Organization</span>
+</a>
+<a class="group flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span class="text-sm font-medium">Academic Calendar</span>
+</a>
+<a class="group flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+<span class="text-sm font-medium">Final Review</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 space-y-4">
+<button class="w-full bg-primary hover:bg-primary-dim text-on-primary py-2.5 rounded text-sm font-semibold transition-transform active:scale-95 shadow-sm">
+                Save Draft
+            </button>
+<div class="pt-4 border-t border-slate-200/20">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:text-indigo-500 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:text-indigo-500 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-[20px]">contact_support</span>
+<span>Support</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-64 bg-background">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-6 py-3 bg-slate-50 dark:bg-slate-950 sticky top-0 z-40">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Academica Admin</span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-1 focus:ring-primary/30 transition-all" placeholder="Search curriculum..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-200/50 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-200/50 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="h-6 w-[1px] bg-outline-variant/20 mx-2"></div>
+<button class="bg-primary text-on-primary px-4 py-1.5 rounded text-sm font-semibold hover:bg-primary-dim transition-colors active:scale-95">
+                    Quick Action
+                </button>
+<img alt="Administrator Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/20" data-alt="close-up portrait of a professional male administrator in a light office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHbdwWzr78g2scanu4H6qgjpNAMpTufAJErlLhVAPDgod9kPRbLJav9By7P5qRRGgWG2ykznYXRBcHwRpqP_ep4STksj5YdnUuPmgikPSlCSmPRY51R4g5kYBv8ylw1w-dClONwRYQ8sZuJP4EAhjT5lnZmeTA0PGGFZy1ZGJaFds8t8es3X-UsIrfT56k5F0ky26aHpH66HW2vqx5w3-sVM48pGwwGDgSULxBTWzqrMKWq19U0S2CII9bsRjxgk5HUy9Wpmr83js"/>
+</div>
+</header>
+<div class="p-8 max-w-7xl mx-auto space-y-8">
+<!-- Header Section -->
+<div class="flex justify-between items-end">
+<div>
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary mb-1 block">Step 02: Core Academics</span>
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface">Curriculum &amp; Subjects</h2>
+<p class="text-on-surface-variant mt-1 max-w-2xl text-sm">Define the intellectual blueprint of your institution by organizing departments, catalogs, and credit distributions.</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-surface-container-high px-4 py-2 rounded text-sm font-bold text-on-surface hover:bg-surface-container-highest transition-colors">Export Map</button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded text-sm font-bold hover:bg-primary-dim shadow-lg shadow-primary/10 flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+                        Create Subject
+                    </button>
+</div>
+</div>
+<!-- Bento Layout Content -->
+<div class="grid grid-cols-12 gap-6">
+<!-- 1. Department Management (Narrow Column) -->
+<section class="col-span-12 lg:col-span-4 space-y-6">
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<div class="bg-surface-container-high px-5 py-4 flex justify-between items-center">
+<h3 class="text-sm font-bold uppercase tracking-wider text-on-surface-variant">Departments</h3>
+<button class="text-primary text-[11px] font-bold uppercase hover:underline">Manage</button>
+</div>
+<div class="p-4 space-y-3">
+<div class="bg-surface-container-lowest p-3 rounded flex items-center justify-between group cursor-pointer hover:ring-1 hover:ring-primary/20 transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-indigo-50 text-indigo-600 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">science</span>
+</div>
+<div>
+<p class="text-sm font-bold">Natural Sciences</p>
+<p class="text-[10px] text-on-surface-variant">12 Subjects • 4 Faculty</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded flex items-center justify-between group cursor-pointer hover:ring-1 hover:ring-primary/20 transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-emerald-50 text-emerald-600 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">functions</span>
+</div>
+<div>
+<p class="text-sm font-bold">Mathematics</p>
+<p class="text-[10px] text-on-surface-variant">8 Subjects • 3 Faculty</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded flex items-center justify-between group cursor-pointer hover:ring-1 hover:ring-primary/20 transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-amber-50 text-amber-600 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">history_edu</span>
+</div>
+<div>
+<p class="text-sm font-bold">Humanities</p>
+<p class="text-[10px] text-on-surface-variant">15 Subjects • 6 Faculty</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</div>
+<button class="w-full py-2 border border-dashed border-outline-variant/50 rounded text-xs font-bold text-on-surface-variant hover:bg-surface-container-high transition-colors">
+                                + Add New Department
+                            </button>
+</div>
+</div>
+<!-- Course/Grade Mapping Visualizer -->
+<div class="bg-surface-container-low rounded-xl p-5">
+<h3 class="text-sm font-bold uppercase tracking-wider text-on-surface-variant mb-4">Grade Mapping</h3>
+<div class="space-y-4">
+<div class="relative pl-6 border-l-2 border-indigo-200">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white"></div>
+<p class="text-xs font-black text-indigo-700 uppercase">Grade 10</p>
+<div class="mt-2 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 bg-white text-[10px] font-medium rounded border border-outline-variant/10">BIO-101</span>
+<span class="px-2 py-0.5 bg-white text-[10px] font-medium rounded border border-outline-variant/10">MAT-101</span>
+<span class="px-2 py-0.5 bg-white text-[10px] font-medium rounded border border-outline-variant/10">ENG-102</span>
+</div>
+</div>
+<div class="relative pl-6 border-l-2 border-indigo-200">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white"></div>
+<p class="text-xs font-black text-indigo-700 uppercase">Grade 11</p>
+<div class="mt-2 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 bg-white text-[10px] font-medium rounded border border-outline-variant/10">CHM-201</span>
+<span class="px-2 py-0.5 bg-white text-[10px] font-medium rounded border border-outline-variant/10">MAT-201</span>
+<span class="px-2 py-0.5 bg-white text-[10px] font-medium rounded border border-outline-variant/10">PHY-105</span>
+</div>
+</div>
+</div>
+<button class="mt-6 w-full flex items-center justify-center gap-2 py-2 bg-indigo-600/10 text-indigo-700 text-xs font-bold rounded hover:bg-indigo-600/20 transition-all">
+<span class="material-symbols-outlined text-sm">link</span>
+                            Open Mapping Tool
+                        </button>
+</div>
+</section>
+<!-- 2. Subject Catalog (Wide Column - TanStack Style) -->
+<section class="col-span-12 lg:col-span-8">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/10 shadow-sm">
+<div class="p-6 border-b border-surface-container">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold text-on-surface">Subject Catalog</h3>
+<div class="flex items-center gap-2">
+<div class="bg-surface-container-low px-3 py-1.5 rounded flex items-center gap-2 text-xs font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">filter_alt</span>
+                                        Filter
+                                    </div>
+<div class="bg-surface-container-low px-3 py-1.5 rounded flex items-center gap-2 text-xs font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">sort</span>
+                                        Sort
+                                    </div>
+</div>
+</div>
+<!-- Table Head -->
+<div class="grid grid-cols-12 gap-4 px-4 py-3 bg-surface-container text-[11px] font-bold uppercase tracking-widest text-on-surface-variant rounded-lg mb-2">
+<div class="col-span-4 flex items-center gap-2">
+                                    Subject &amp; Code
+                                    <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</div>
+<div class="col-span-3">Department</div>
+<div class="col-span-2">Type</div>
+<div class="col-span-1">Credits</div>
+<div class="col-span-2 text-right">Actions</div>
+</div>
+<!-- Table Body -->
+<div class="space-y-1">
+<!-- Row 1 -->
+<div class="grid grid-cols-12 gap-4 px-4 py-4 items-center hover:bg-surface-container-low transition-colors rounded-lg group">
+<div class="col-span-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">Advanced Calculus II</span>
+<span class="text-[11px] font-mono text-primary bg-primary/5 px-1.5 py-0.5 rounded self-start mt-1">MAT-402</span>
+</div>
+</div>
+<div class="col-span-3">
+<span class="text-xs font-medium text-on-surface-variant">Mathematics</span>
+</div>
+<div class="col-span-2">
+<span class="px-2 py-1 bg-blue-50 text-blue-700 text-[10px] font-black uppercase rounded border border-blue-100">Theory</span>
+</div>
+<div class="col-span-1">
+<span class="text-sm font-semibold">4.0</span>
+</div>
+<div class="col-span-2 flex justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1.5 text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 gap-4 px-4 py-4 items-center hover:bg-surface-container-low transition-colors rounded-lg group">
+<div class="col-span-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">Molecular Biology Lab</span>
+<span class="text-[11px] font-mono text-primary bg-primary/5 px-1.5 py-0.5 rounded self-start mt-1">BIO-215</span>
+</div>
+</div>
+<div class="col-span-3">
+<span class="text-xs font-medium text-on-surface-variant">Natural Sciences</span>
+</div>
+<div class="col-span-2">
+<span class="px-2 py-1 bg-amber-50 text-amber-700 text-[10px] font-black uppercase rounded border border-amber-100">Practical</span>
+</div>
+<div class="col-span-1">
+<span class="text-sm font-semibold">2.5</span>
+</div>
+<div class="col-span-2 flex justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1.5 text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-12 gap-4 px-4 py-4 items-center hover:bg-surface-container-low transition-colors rounded-lg group">
+<div class="col-span-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">Western Philosophy</span>
+<span class="text-[11px] font-mono text-primary bg-primary/5 px-1.5 py-0.5 rounded self-start mt-1">PHL-101</span>
+</div>
+</div>
+<div class="col-span-3">
+<span class="text-xs font-medium text-on-surface-variant">Humanities</span>
+</div>
+<div class="col-span-2">
+<span class="px-2 py-1 bg-blue-50 text-blue-700 text-[10px] font-black uppercase rounded border border-blue-100">Theory</span>
+</div>
+<div class="col-span-1">
+<span class="text-sm font-semibold">3.0</span>
+</div>
+<div class="col-span-2 flex justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1.5 text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="grid grid-cols-12 gap-4 px-4 py-4 items-center hover:bg-surface-container-low transition-colors rounded-lg group">
+<div class="col-span-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">Experimental Physics</span>
+<span class="text-[11px] font-mono text-primary bg-primary/5 px-1.5 py-0.5 rounded self-start mt-1">PHY-330</span>
+</div>
+</div>
+<div class="col-span-3">
+<span class="text-xs font-medium text-on-surface-variant">Natural Sciences</span>
+</div>
+<div class="col-span-2">
+<span class="px-2 py-1 bg-purple-50 text-purple-700 text-[10px] font-black uppercase rounded border border-purple-100">Hybrid</span>
+</div>
+<div class="col-span-1">
+<span class="text-sm font-semibold">5.0</span>
+</div>
+<div class="col-span-2 flex justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1.5 text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="px-6 py-4 flex justify-between items-center text-xs text-on-surface-variant font-medium">
+<p>Showing 4 of 45 subjects</p>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1">
+<span>Rows per page:</span>
+<select class="bg-transparent border-none focus:ring-0 text-xs font-bold p-0">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-1 rounded hover:bg-surface-container transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined text-sm">first_page</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<span class="mx-2">Page 1 of 5</span>
+<button class="p-1 rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm">last_page</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Async Metric: Credit Analysis -->
+<div class="mt-8 grid grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="text-[10px] font-bold uppercase text-on-surface-variant tracking-wider">Total Credits</p>
+<p class="text-2xl font-black text-indigo-700 mt-1">142.5</p>
+<div class="w-full bg-outline-variant/20 h-1 mt-3 rounded-full overflow-hidden">
+<div class="bg-indigo-600 h-full w-[65%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="text-[10px] font-bold uppercase text-on-surface-variant tracking-wider">Theory Focus</p>
+<p class="text-2xl font-black text-on-surface mt-1">72%</p>
+<p class="text-[10px] text-on-surface-variant mt-2 font-medium">Global benchmark: 65%</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="text-[10px] font-bold uppercase text-on-surface-variant tracking-wider">Lab Intensity</p>
+<p class="text-2xl font-black text-on-surface mt-1">18%</p>
+<div class="flex items-center gap-1 text-error text-[10px] font-bold mt-2">
+<span class="material-symbols-outlined text-[12px]">trending_down</span>
+                                -4% from last term
+                            </div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Configuration | EduAdmin Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#0b0f10",
+                        "secondary-dim": "#545256",
+                        "inverse-primary": "#8582ff",
+                        "on-tertiary": "#faf8ff",
+                        "secondary-fixed-dim": "#d7d3d8",
+                        "surface-container-highest": "#d9e4ea",
+                        "on-surface": "#2a3439",
+                        "tertiary-container": "#d2d9f8",
+                        "surface-bright": "#f7f9fb",
+                        "on-primary-fixed-variant": "#4a40e0",
+                        "secondary-container": "#e5e1e6",
+                        "on-primary": "#faf6ff",
+                        "on-error-container": "#782232",
+                        "primary-container": "#e2dfff",
+                        "primary": "#4d44e3",
+                        "on-error": "#fff7f7",
+                        "secondary": "#605e62",
+                        "outline": "#717c82",
+                        "outline-variant": "#a9b4b9",
+                        "on-background": "#2a3439",
+                        "on-secondary-fixed": "#403f43",
+                        "surface-container-low": "#f0f4f7",
+                        "on-secondary": "#fcf8fc",
+                        "on-primary-fixed": "#2a13c5",
+                        "inverse-on-surface": "#9a9d9f",
+                        "surface": "#f7f9fb",
+                        "error-dim": "#4f0116",
+                        "tertiary": "#575e78",
+                        "secondary-fixed": "#e5e1e6",
+                        "surface-container-high": "#e1e9ee",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#d2d9f8",
+                        "surface-dim": "#cfdce3",
+                        "surface-variant": "#d9e4ea",
+                        "primary-fixed-dim": "#d2d0ff",
+                        "primary-fixed": "#e2dfff",
+                        "error": "#9e3f4e",
+                        "surface-tint": "#4d44e3",
+                        "on-secondary-fixed-variant": "#5c5b5f",
+                        "on-secondary-container": "#525155",
+                        "background": "#f7f9fb",
+                        "on-primary-container": "#3f33d6",
+                        "tertiary-fixed-dim": "#c4cbe9",
+                        "on-tertiary-fixed": "#323951",
+                        "error-container": "#ff8b9a",
+                        "on-tertiary-container": "#444c65",
+                        "tertiary-dim": "#4b526c",
+                        "on-tertiary-fixed-variant": "#4e556f",
+                        "surface-container": "#e8eff3",
+                        "primary-dim": "#4034d7",
+                        "on-surface-variant": "#566166"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+<!-- Top Navigation Bar -->
+<header class="bg-[#f7f9fb] dark:bg-slate-900 font-inter antialiased tracking-tight w-full border-b-0 bg-[#f0f4f7] dark:bg-slate-800 flat no shadows flex justify-between items-center px-8 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold text-[#2a3439] dark:text-slate-100">EduAdmin Portal</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-[#566166]">
+<button class="material-symbols-outlined hover:bg-[#f0f4f7] transition-colors p-2 rounded-full" data-icon="help">help</button>
+<button class="material-symbols-outlined hover:bg-[#f0f4f7] transition-colors p-2 rounded-full" data-icon="notifications">notifications</button>
+</div>
+<div class="flex items-center gap-3 border-l pl-6 border-outline-variant/20">
+<img alt="Support Avatar" class="w-8 h-8 rounded-full bg-surface-container-high" data-alt="close up professional headshot of a friendly customer support representative with a clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyOGOOTDw2PDNr75BawKbu1B_vv7H_YNWUt_dy1XTCJXPNHwyys76eFjZpWW5H_ujrQR4WdRqrsHG5G2MuK_qwlLFJ8rd3pQErDoWcyTzxny_VCD1iB4qxXAECpyFs24Q6vdP7KN9C42bU3QdyYFXS-NevwnBn7dPPCsdiBUi7oxy8uomP-vtzu9LIer5UtqSOUqTJ-RlnOTGztACRMDOYeX6LbgHbVFvRb8z9TOpF6XeJEvZ98kvHG01Si07BPlnEUzneyvmiwIA"/>
+</div>
+</div>
+</header>
+<div class="flex min-h-[calc(100vh-72px)]">
+<!-- Side Navigation Bar -->
+<nav class="bg-[#f0f4f7] dark:bg-slate-800 h-screen w-64 border-r-0 tonal layering via surface-container-low flat no shadows flex flex-col h-full py-6 pl-4">
+<div class="mb-10 pr-4">
+<div class="flex items-center gap-3 mb-1">
+<span class="text-[#4d44e3] dark:text-indigo-400 font-bold text-lg">Onboarding</span>
+</div>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest font-semibold">Setup in progress</p>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#566166] hover:text-[#2a3439] hover:bg-white/50 dark:hover:bg-slate-700/50 transition-all duration-300 label-md font-medium tracking-normal" href="#">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span>Institution</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-700 text-[#4d44e3] font-semibold rounded-l-lg shadow-sm label-md font-medium tracking-normal" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span>Academic</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#566166] hover:text-[#2a3439] hover:bg-white/50 dark:hover:bg-slate-700/50 transition-all duration-300 label-md font-medium tracking-normal" href="#">
+<span class="material-symbols-outlined" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span>Account</span>
+</a>
+</div>
+<div class="mt-auto pr-4">
+<button class="w-full py-3 bg-primary text-on-primary font-semibold rounded shadow-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="save">save</span>
+<span>Save Draft</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto bg-surface p-8 lg:p-12">
+<!-- Progress Indicator -->
+<div class="max-w-5xl mx-auto mb-12">
+<div class="flex items-center justify-between relative">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-surface-container-high -translate-y-1/2 z-0"></div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary-container text-primary flex items-center justify-center border-4 border-surface">
+<span class="material-symbols-outlined text-xl" data-icon="check">check</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant uppercase">Institution</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center border-4 border-surface ring-2 ring-primary/20">
+<span class="text-sm font-bold">2</span>
+</div>
+<span class="text-xs font-bold text-primary uppercase">Academic</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center border-4 border-surface">
+<span class="text-sm font-bold">3</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant uppercase opacity-50">Account</span>
+</div>
+</div>
+</div>
+<div class="max-w-5xl mx-auto">
+<header class="mb-10">
+<h1 class="text-3xl font-extrabold text-on-surface tracking-tight mb-2">Academic Configuration</h1>
+<p class="text-on-surface-variant max-w-2xl">Define the structural core of your school's academic cycle. These settings will dictate grade reporting and scheduling for the entire institution.</p>
+</header>
+<!-- Bento Grid Layout for Configurations -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Academic Year Card -->
+<section class="md:col-span-4 flex flex-col rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/10">
+<div class="bg-surface-container-high px-6 py-4">
+<h3 class="text-sm font-bold text-on-surface uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="calendar_today">calendar_today</span>
+                                Academic Year
+                            </h3>
+</div>
+<div class="p-6 flex-1 flex flex-col gap-4 bg-surface-container-lowest">
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1 uppercase">Active Cycle</label>
+<select class="w-full bg-surface-container-low border-0 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary/20">
+<option>2024 - 2025</option>
+<option>2025 - 2026</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1 uppercase">Start Date</label>
+<input class="w-full bg-surface-container-low border-0 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary/20" type="date" value="2024-09-01"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1 uppercase">End Date</label>
+<input class="w-full bg-surface-container-low border-0 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary/20" type="date" value="2025-06-30"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Session Timings Card -->
+<section class="md:col-span-8 flex flex-col rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/10">
+<div class="bg-surface-container-high px-6 py-4 flex justify-between items-center">
+<h3 class="text-sm font-bold text-on-surface uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="schedule">schedule</span>
+                                Session Timings
+                            </h3>
+<button class="text-xs font-bold text-primary flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                                Add Shift
+                            </button>
+</div>
+<div class="p-6 flex-1 bg-surface-container-lowest">
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-low border border-outline-variant/10">
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface">Morning Shift</p>
+<p class="text-xs text-on-surface-variant">Standard Daily Schedule</p>
+</div>
+<div class="flex items-center gap-2">
+<input class="bg-surface-container-lowest border-0 rounded text-sm px-2 py-1" type="time" value="08:00"/>
+<span class="text-on-surface-variant">—</span>
+<input class="bg-surface-container-lowest border-0 rounded text-sm px-2 py-1" type="time" value="14:30"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-low border border-outline-variant/10">
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface">Afternoon Shift</p>
+<p class="text-xs text-on-surface-variant">Extracurricular / Special</p>
+</div>
+<div class="flex items-center gap-2">
+<input class="bg-surface-container-lowest border-0 rounded text-sm px-2 py-1" type="time" value="15:00"/>
+<span class="text-on-surface-variant">—</span>
+<input class="bg-surface-container-lowest border-0 rounded text-sm px-2 py-1" type="time" value="18:00"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Grading Scale Card -->
+<section class="md:col-span-12 flex flex-col rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/10">
+<div class="bg-surface-container-high px-6 py-4 flex justify-between items-center">
+<h3 class="text-sm font-bold text-on-surface uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="grade">grade</span>
+                                Grading Scale &amp; Standards
+                            </h3>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">GPA 4.0</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-bold rounded-full uppercase">Standardized</span>
+</div>
+</div>
+<div class="p-0 flex-1 bg-surface-container-lowest overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-6 py-3 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest border-b border-outline-variant/10">Grade</th>
+<th class="px-6 py-3 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest border-b border-outline-variant/10">Percentage Range</th>
+<th class="px-6 py-3 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest border-b border-outline-variant/10">GPA Points</th>
+<th class="px-6 py-3 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest border-b border-outline-variant/10">Description</th>
+<th class="px-6 py-3 border-b border-outline-variant/10"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-4 font-bold text-on-surface">A+</td>
+<td class="px-6 py-4 text-sm">97% - 100%</td>
+<td class="px-6 py-4 text-sm font-medium">4.0</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant italic">Outstanding Achievement</td>
+<td class="px-6 py-4 text-right">
+<button class="material-symbols-outlined text-on-surface-variant/50 hover:text-primary transition-colors" data-icon="edit">edit</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-4 font-bold text-on-surface">A</td>
+<td class="px-6 py-4 text-sm">93% - 96%</td>
+<td class="px-6 py-4 text-sm font-medium">4.0</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant italic">Excellent</td>
+<td class="px-6 py-4 text-right">
+<button class="material-symbols-outlined text-on-surface-variant/50 hover:text-primary transition-colors" data-icon="edit">edit</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-4 font-bold text-on-surface">B+</td>
+<td class="px-6 py-4 text-sm">87% - 89%</td>
+<td class="px-6 py-4 text-sm font-medium">3.3</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant italic">Very Good</td>
+<td class="px-6 py-4 text-right">
+<button class="material-symbols-outlined text-on-surface-variant/50 hover:text-primary transition-colors" data-icon="edit">edit</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-4 font-bold text-on-surface text-error">F</td>
+<td class="px-6 py-4 text-sm text-error">Below 60%</td>
+<td class="px-6 py-4 text-sm font-medium text-error">0.0</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant italic">Failure</td>
+<td class="px-6 py-4 text-right">
+<button class="material-symbols-outlined text-on-surface-variant/50 hover:text-primary transition-colors" data-icon="edit">edit</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 bg-surface-container-low/20">
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add_circle">add_circle</span>
+                                    Define Custom Grade
+                                </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Actions -->
+<div class="mt-12 pt-8 border-t border-outline-variant/10 flex items-center justify-between">
+<button class="flex items-center gap-2 px-6 py-3 text-on-surface-variant hover:text-on-surface font-semibold transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+<span>Previous Step</span>
+</button>
+<div class="flex items-center gap-4">
+<span class="text-xs text-on-surface-variant font-medium hidden sm:block italic">Draft saved 2 mins ago</span>
+<button class="px-8 py-3 bg-primary text-on-primary font-bold rounded shadow-sm hover:opacity-95 transition-opacity flex items-center gap-3">
+<span>Next: Admin Account</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

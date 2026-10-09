@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScholarNexus - Secure Institutional Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .bg-glass { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .ghost-border { border: 1px solid rgba(113, 124, 130, 0.2); }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#a9b4b9",
+                      "primary-fixed-dim": "#d2d0ff",
+                      "tertiary-dim": "#4b526c",
+                      "surface-container-low": "#f0f4f7",
+                      "surface-container": "#e8eff3",
+                      "tertiary": "#575e78",
+                      "secondary": "#605e62",
+                      "surface-tint": "#4d44e3",
+                      "on-tertiary": "#faf8ff",
+                      "secondary-container": "#e5e1e6",
+                      "secondary-fixed-dim": "#d7d3d8",
+                      "error": "#9e3f4e",
+                      "on-tertiary-fixed-variant": "#4e556f",
+                      "on-secondary": "#fcf8fc",
+                      "surface-container-highest": "#d9e4ea",
+                      "on-tertiary-container": "#444c65",
+                      "outline": "#717c82",
+                      "on-secondary-fixed-variant": "#5c5b5f",
+                      "tertiary-container": "#d2d9f8",
+                      "on-tertiary-fixed": "#323951",
+                      "inverse-surface": "#0b0f10",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-dim": "#4034d7",
+                      "on-error": "#fff7f7",
+                      "primary-container": "#e2dfff",
+                      "on-background": "#2a3439",
+                      "surface-container-high": "#e1e9ee",
+                      "inverse-primary": "#8582ff",
+                      "error-dim": "#4f0116",
+                      "on-primary-container": "#3f33d6",
+                      "background": "#f7f9fb",
+                      "tertiary-fixed-dim": "#c4cbe9",
+                      "surface-dim": "#cfdce3",
+                      "secondary-dim": "#545256",
+                      "on-primary": "#faf6ff",
+                      "primary": "#4d44e3",
+                      "on-primary-fixed-variant": "#4a40e0",
+                      "surface": "#f7f9fb",
+                      "on-surface-variant": "#566166",
+                      "primary-fixed": "#e2dfff",
+                      "on-surface": "#2a3439",
+                      "error-container": "#ff8b9a",
+                      "on-error-container": "#782232",
+                      "tertiary-fixed": "#d2d9f8",
+                      "on-secondary-fixed": "#403f43",
+                      "on-secondary-container": "#525155",
+                      "on-primary-fixed": "#2a13c5",
+                      "surface-variant": "#d9e4ea",
+                      "surface-bright": "#f7f9fb",
+                      "inverse-on-surface": "#9a9d9f",
+                      "secondary-fixed": "#e5e1e6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Inter"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container overflow-hidden">
+<!-- TopNavBar (Shared Component) - Absolute Positioned -->
+<header class="w-full absolute top-0 z-50 flex justify-between items-center px-8 py-6 max-w-full">
+<div class="text-xl font-bold tracking-tighter text-slate-900 dark:text-slate-50">ScholarNexus</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors" href="#">Support</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors" href="#">Security Compliance</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors" href="#">Privacy Policy</a>
+</nav>
+<button class="bg-surface-container-high px-5 py-2 text-on-surface-variant font-semibold rounded hover:bg-surface-container-highest transition-all scale-95 active:duration-150">Institutional Portal</button>
+</header>
+<main class="flex min-h-screen">
+<!-- Left Side: Tonal Layering & Imagery -->
+<section class="hidden lg:flex lg:w-1/2 relative flex-col justify-center items-center overflow-hidden bg-primary">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Institutional Hall" class="w-full h-full object-cover opacity-30 mix-blend-overlay" data-alt="Modern minimalist university architecture with sunlight streaming through large windows casting long shadows on clean floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqkqVOkP7lMme5_okfrVLndVLSqVYCadPQuuVfca80Nnn87Z7qx96gYoj3bNj0xsTZgaIbaVyXviR7a5XxaRscT243YiIGNKCpayhTn7a6SCO4eqJswJt_VRhFEXZISJIN4pKQ1yn3d1oN5mKg_ps-DKtDsVsSUDdMMuxkJ2a2gRfG4-LnG_fQSuKF8mq-0QAshKTZc9Nx_5L2uPnEdiBFt-vLP2WrUr6PLwgnz9Qz5eQxCcYiLZjTxdT2BumZLc53-Nvjq4BG_eQ"/>
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-dim to-indigo-900 opacity-90"></div>
+</div>
+<!-- Content -->
+<div class="relative z-10 px-20 max-w-3xl">
+<span class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-primary-fixed bg-white/10 rounded-full backdrop-blur-sm uppercase">Institutional Excellence</span>
+<h1 class="text-5xl font-extrabold text-white leading-tight tracking-tight mb-8">
+                    "Intelligence plus character—that is the goal of true education."
+                </h1>
+<div class="flex items-center space-x-4">
+<div class="h-1 w-12 bg-primary-fixed-dim rounded-full"></div>
+<p class="text-primary-container font-medium text-lg italic">Dr. Martin Luther King Jr.</p>
+</div>
+</div>
+<!-- Geometric Accents -->
+<div class="absolute bottom-[-10%] right-[-10%] w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl"></div>
+<div class="absolute top-[-5%] left-[-5%] w-[300px] h-[300px] bg-indigo-400/10 rounded-full blur-2xl"></div>
+</section>
+<!-- Right Side: Login Canvas -->
+<section class="w-full lg:w-1/2 bg-surface flex items-center justify-center p-8 sm:p-12 md:p-24">
+<div class="w-full max-w-[480px]">
+<!-- Brand Anchor -->
+<div class="mb-12">
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tighter mb-2">Scholar Metric</h2>
+<p class="text-on-surface-variant text-sm font-medium">Access your institutional dashboard with secure multi-tenant authentication.</p>
+</div>
+<!-- Role Tabs -->
+<div class="grid grid-cols-3 gap-1 p-1 bg-surface-container-low rounded mb-8">
+<button class="py-2.5 px-2 text-xs font-semibold rounded bg-surface-container-lowest text-primary shadow-sm">Administrator</button>
+<button class="py-2.5 px-2 text-xs font-medium rounded text-on-surface-variant hover:text-on-surface transition-all">Teacher</button>
+<button class="py-2.5 px-2 text-xs font-medium rounded text-on-surface-variant hover:text-on-surface transition-all">Student/Parent</button>
+</div>
+<!-- Form -->
+<form class="space-y-6">
+<!-- Institution Selector -->
+<div class="space-y-2">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Select your Institution</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant text-lg">school</span>
+<select class="w-full pl-10 pr-4 py-3.5 bg-surface-container-lowest border-none rounded text-on-surface text-sm font-medium ghost-border focus:ring-2 focus:ring-primary-container focus:outline-none appearance-none transition-all">
+<option>Global Institute of Technology</option>
+<option>North Highland University</option>
+<option>Southside Prep Academy</option>
+<option>Western Reserve College</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Email -->
+<div class="space-y-2">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant text-lg">mail</span>
+<input class="w-full pl-10 pr-4 py-3.5 bg-surface-container-lowest border-none rounded text-on-surface text-sm font-medium ghost-border focus:ring-2 focus:ring-primary-container focus:outline-none transition-all placeholder:text-outline-variant/60" placeholder="admin@institution.edu" type="email"/>
+</div>
+</div>
+<!-- Password -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Password</label>
+<a class="text-xs font-semibold text-primary hover:text-primary-dim transition-colors" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant text-lg">lock</span>
+<input class="w-full pl-10 pr-12 py-3.5 bg-surface-container-lowest border-none rounded text-on-surface text-sm font-medium ghost-border focus:ring-2 focus:ring-primary-container focus:outline-none transition-all" type="password" value="password123"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+<!-- Action -->
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-dim text-white font-bold rounded shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all scale-100 active:scale-95 duration-150" type="submit">
+                        Sign In to Dashboard
+                    </button>
+</form>
+<!-- Security Trust -->
+<div class="mt-12 pt-8 flex items-center justify-center space-x-6">
+<div class="flex items-center space-x-2 text-outline text-xs font-medium bg-surface-container-low px-4 py-2 rounded">
+<span class="material-symbols-outlined text-sm" data-weight="fill">shield_lock</span>
+<span>Protected by 256-bit SSL</span>
+</div>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center space-x-2 text-outline text-xs font-medium">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span>GDPR Compliant</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="fixed bottom-0 w-full flex flex-row justify-between items-center px-8 py-4 border-t border-slate-200/20 bg-slate-50 dark:bg-slate-950 z-50">
+<div class="label-sm font-inter text-slate-500 dark:text-slate-400">© 2024 ScholarNexus SaaS. Secure Multi-tenant Architecture.</div>
+<div class="flex space-x-6">
+<a class="label-sm font-inter text-slate-500 dark:text-slate-400 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="label-sm font-inter text-slate-500 dark:text-slate-400 hover:underline transition-all opacity-80 hover:opacity-100" href="#">GDPR Compliance</a>
+<a class="label-sm font-inter text-slate-500 dark:text-slate-400 hover:underline transition-all opacity-80 hover:opacity-100" href="#">System Status</a>
+</div>
+</footer>
+</body></html>

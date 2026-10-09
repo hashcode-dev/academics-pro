@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Institution Onboarding | EduAdmin Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#0b0f10",
+                    "secondary-dim": "#545256",
+                    "inverse-primary": "#8582ff",
+                    "on-tertiary": "#faf8ff",
+                    "secondary-fixed-dim": "#d7d3d8",
+                    "surface-container-highest": "#d9e4ea",
+                    "on-surface": "#2a3439",
+                    "tertiary-container": "#d2d9f8",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary-fixed-variant": "#4a40e0",
+                    "secondary-container": "#e5e1e6",
+                    "on-primary": "#faf6ff",
+                    "on-error-container": "#782232",
+                    "primary-container": "#e2dfff",
+                    "primary": "#4d44e3",
+                    "on-error": "#fff7f7",
+                    "secondary": "#605e62",
+                    "outline": "#717c82",
+                    "outline-variant": "#a9b4b9",
+                    "on-background": "#2a3439",
+                    "on-secondary-fixed": "#403f43",
+                    "surface-container-low": "#f0f4f7",
+                    "on-secondary": "#fcf8fc",
+                    "on-primary-fixed": "#2a13c5",
+                    "inverse-on-surface": "#9a9d9f",
+                    "surface": "#f7f9fb",
+                    "error-dim": "#4f0116",
+                    "tertiary": "#575e78",
+                    "secondary-fixed": "#e5e1e6",
+                    "surface-container-high": "#e1e9ee",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#d2d9f8",
+                    "surface-dim": "#cfdce3",
+                    "surface-variant": "#d9e4ea",
+                    "primary-fixed-dim": "#d2d0ff",
+                    "primary-fixed": "#e2dfff",
+                    "error": "#9e3f4e",
+                    "surface-tint": "#4d44e3",
+                    "on-secondary-fixed-variant": "#5c5b5f",
+                    "on-secondary-container": "#525155",
+                    "background": "#f7f9fb",
+                    "on-primary-container": "#3f33d6",
+                    "tertiary-fixed-dim": "#c4cbe9",
+                    "on-tertiary-fixed": "#323951",
+                    "error-container": "#ff8b9a",
+                    "on-tertiary-container": "#444c65",
+                    "tertiary-dim": "#4b526c",
+                    "on-tertiary-fixed-variant": "#4e556f",
+                    "surface-container": "#e8eff3",
+                    "primary-dim": "#4034d7",
+                    "on-surface-variant": "#566166"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="w-full border-b-0 bg-[#f7f9fb] dark:bg-slate-900 flex justify-between items-center px-8 py-4 font-inter antialiased tracking-tight sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold text-[#2a3439] dark:text-slate-100">EduAdmin Portal</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#566166] hover:bg-[#f0f4f7] transition-colors rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<button class="p-2 text-[#566166] hover:bg-[#f0f4f7] transition-colors rounded-full flex items-center justify-center relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-surface-container-high">
+<img alt="Support Avatar" class="w-8 h-8 rounded-full bg-primary-container object-cover" data-alt="Close up professional portrait of a customer support specialist with a friendly expression in a modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0jEDpuqa4mf-SrDmCOzoouh9WA3t4b76z6MC7WjUzV42Q9_DloaIVla4Ep_u9EFGFLkVZMnt_PiGSnIsYqegZvpLuM9Rr9RYyQ7Tmb80KfZUhyhj4XHQGlN7puP12AHNjnrCd-lLJliuU-iR2R6PEx2BttGq23iBSyG4uXtqFyIJCHUPIATgY1Z-w2B2nnvlvwkCYM_LhMpEEXS4cHGqzh9EJ_y81ra-Y_qPXX_L42ErGQjR6_A2ypAPXeUnrMqMwY69nHfKLnDY"/>
+</div>
+</div>
+</header>
+<div class="flex min-h-[calc(100vh-72px)]">
+<!-- SideNavBar -->
+<aside class="hidden md:flex h-screen w-64 border-r-0 bg-[#f0f4f7] dark:bg-slate-800 flex-col py-6 pl-4 sticky top-[72px]">
+<div class="mb-10 px-4">
+<div class="flex items-center gap-3 mb-1">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<div>
+<h2 class="text-sm font-semibold text-on-surface leading-tight">Onboarding</h2>
+<p class="text-xs text-on-surface-variant">Setup in progress</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 py-3 px-4 bg-white dark:bg-slate-700 text-[#4d44e3] font-semibold rounded-l-lg shadow-sm transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="domain" style="font-variation-settings: 'FILL' 1;">domain</span>
+<span class="label-md tracking-normal">Institution</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-[#566166] hover:text-[#2a3439] hover:bg-white/50 dark:hover:bg-slate-700/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="label-md tracking-normal">Academic</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 text-[#566166] hover:text-[#2a3439] hover:bg-white/50 dark:hover:bg-slate-700/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span class="label-md tracking-normal">Account</span>
+</a>
+</nav>
+<div class="mt-auto pr-4 pb-4">
+<button class="w-full py-2.5 px-4 bg-surface-container-high text-on-surface font-medium rounded text-sm hover:bg-surface-container-highest transition-colors">
+                    Save Draft
+                </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 bg-surface p-8 max-w-5xl mx-auto w-full">
+<!-- Progress Stepper -->
+<div class="mb-12">
+<div class="flex items-center justify-between relative">
+<!-- Progress Line Background -->
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-surface-container-high -translate-y-1/2 z-0"></div>
+<!-- Active Progress Line -->
+<div class="absolute top-1/2 left-0 w-1/4 h-0.5 bg-primary -translate-y-1/2 z-0"></div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs font-bold ring-4 ring-surface">1</div>
+<span class="mt-2 text-xs font-semibold text-on-surface">Institution</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-xs font-bold ring-4 ring-surface">2</div>
+<span class="mt-2 text-xs font-medium text-on-surface-variant">Infrastructure</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-xs font-bold ring-4 ring-surface">3</div>
+<span class="mt-2 text-xs font-medium text-on-surface-variant">Academic Structure</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-xs font-bold ring-4 ring-surface">4</div>
+<span class="mt-2 text-xs font-medium text-on-surface-variant">Review &amp; Submit</span>
+</div>
+</div>
+</div>
+<!-- Page Header -->
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold text-on-surface tracking-tight mb-2">Institution Onboarding</h1>
+<p class="text-on-surface-variant">Register your educational institution to begin the management journey.</p>
+</div>
+<!-- Onboarding Form Grid (Asymmetric Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Primary Forms (75%) -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Basic Information Card -->
+<section class="bg-surface-container-lowest overflow-hidden rounded shadow-sm border border-outline-variant/20">
+<header class="bg-surface-container-high px-6 py-4">
+<h3 class="text-sm font-bold text-on-surface uppercase tracking-wider">Basic Information</h3>
+</header>
+<div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2">
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="inst_name">Institution Legal Name</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 rounded focus:ring-2 focus:ring-primary-container focus:border-primary px-4 py-2.5 text-sm text-on-surface transition-all placeholder:text-outline-variant" id="inst_name" placeholder="e.g. St. Xavier's International Academy" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="inst_type">Institution Type</label>
+<select class="w-full bg-surface-container-lowest border-outline-variant/20 rounded focus:ring-2 focus:ring-primary-container focus:border-primary px-4 py-2.5 text-sm text-on-surface transition-all" id="inst_type">
+<option>K-12 Primary School</option>
+<option>Higher Secondary College</option>
+<option>Technical Institute</option>
+<option>University</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="inst_code">Registration Code</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 rounded focus:ring-2 focus:ring-primary-container focus:border-primary px-4 py-2.5 text-sm text-on-surface transition-all placeholder:text-outline-variant" id="inst_code" placeholder="REG-000000" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="inst_email">Primary Email</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 rounded focus:ring-2 focus:ring-primary-container focus:border-primary px-4 py-2.5 text-sm text-on-surface transition-all placeholder:text-outline-variant" id="inst_email" placeholder="admin@institution.edu" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="inst_phone">Contact Number</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 rounded focus:ring-2 focus:ring-primary-container focus:border-primary px-4 py-2.5 text-sm text-on-surface transition-all placeholder:text-outline-variant" id="inst_phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+</section>
+<!-- Address Details Card -->
+<section class="bg-surface-container-lowest overflow-hidden rounded shadow-sm border border-outline-variant/20">
+<header class="bg-surface-container-high px-6 py-4">
+<h3 class="text-sm font-bold text-on-surface uppercase tracking-wider">Address Details</h3>
+</header>
+<div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2">
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="street">Street Address</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 rounded focus:ring-2 focus:ring-primary-container focus:border-primary px-4 py-2.5 text-sm text-on-surface transition-all placeholder:text-outline-variant" id="street" placeholder="123 Education Way, Academic District" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="city">City / Town</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 rounded focus:ring-2 focus:ring-primary-container focus:border-primary px-4 py-2.5 text-sm text-on-surface transition-all" id="city" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="state">State / Province</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 rounded focus:ring-2 focus:ring-primary-container focus:border-primary px-4 py-2.5 text-sm text-on-surface transition-all" id="state" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="zip">Postal / ZIP Code</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 rounded focus:ring-2 focus:ring-primary-container focus:border-primary px-4 py-2.5 text-sm text-on-surface transition-all" id="zip" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="country">Country</label>
+<select class="w-full bg-surface-container-lowest border-outline-variant/20 rounded focus:ring-2 focus:ring-primary-container focus:border-primary px-4 py-2.5 text-sm text-on-surface transition-all" id="country">
+<option>United States</option>
+<option>United Kingdom</option>
+<option>Canada</option>
+<option>Australia</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Form Actions -->
+<div class="flex items-center justify-end gap-4 py-4">
+<button class="px-6 py-2.5 bg-surface-container-high text-on-surface font-semibold rounded hover:bg-surface-container-highest transition-colors text-sm">
+                            Save Draft
+                        </button>
+<button class="px-8 py-2.5 bg-gradient-to-r from-primary to-primary-dim text-on-primary font-semibold rounded shadow-md hover:shadow-lg transition-all text-sm">
+                            Save &amp; Continue
+                        </button>
+</div>
+</div>
+<!-- Right Column: Contextual Guidance (25%) -->
+<div class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container-low rounded p-6 border border-outline-variant/10">
+<div class="flex items-center gap-2 mb-4 text-primary">
+<span class="material-symbols-outlined text-lg" data-icon="lightbulb">lightbulb</span>
+<h4 class="text-sm font-bold uppercase tracking-wide">Why this matters</h4>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-4">
+                            Your institution's legal name and registration code are used for official certificates, governmental reporting, and financial records. Ensure they match your legal documentation exactly.
+                        </p>
+<div class="flex items-center gap-3 p-3 bg-primary-container/30 rounded border border-primary/10">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="verified_user">verified_user</span>
+<span class="text-[11px] font-medium text-on-primary-container">Secure Data Transmission Active</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded p-6 border border-outline-variant/10">
+<h4 class="text-sm font-bold text-on-surface mb-4 uppercase tracking-wide">Support Documentation</h4>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-outline text-lg" data-icon="description">description</span>
+<div>
+<p class="text-xs font-semibold text-on-surface">Naming Guidelines</p>
+<p class="text-[10px] text-on-surface-variant">PDF, 1.2 MB</p>
+</div>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-outline text-lg" data-icon="description">description</span>
+<div>
+<p class="text-xs font-semibold text-on-surface">Registration Requirements</p>
+<p class="text-[10px] text-on-surface-variant">PDF, 840 KB</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Visual Accent Card -->
+<div class="rounded overflow-hidden relative h-48 shadow-inner bg-surface-dim">
+<img alt="Registration Progress" class="w-full h-full object-cover mix-blend-overlay" data-alt="Modern architectural rendering of a school campus with clean lines, glass facades, and landscaped greenery in soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb-avGKCjfV5yufiqoGKK2fgNtf-xluV2Hzt7lHDLsgsQv-cdRzuIfzlNRH0pmQSSq6Hq9gFJ30yx3g_xcFf9cQ_GvlLllhY1Ce87A1ZdiY2a8j5kRnGmw2lL4KtPA00WUahA7H-qr7Ppt_-s2lk1VGz-u0ObyOdGi9jCVsb6yDvJLyPbHT_xN0Rimo4Mjyzr6E59cj74MnXDLnd7kKN2LV0lRyWCfz3bmx81a9ap34FRJBOteAJ6ZvrG3xsrVdDvRCJ2ekM2ROCY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 to-transparent flex items-end p-4">
+<p class="text-[10px] text-white/90 font-medium italic">"Building the foundation for tomorrow's leaders."</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Mobile Bottom Navigation (Hidden on desktop) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-lowest border-t-0 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] flex items-center justify-around py-3 px-2 z-50">
+<a class="flex flex-col items-center gap-1 text-[#4d44e3]" href="#">
+<span class="material-symbols-outlined" data-icon="domain" style="font-variation-settings: 'FILL' 1;">domain</span>
+<span class="text-[10px] font-bold">Institution</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#566166]" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="text-[10px] font-medium">Academic</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#566166]" href="#">
+<span class="material-symbols-outlined" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span class="text-[10px] font-medium">Account</span>
+</a>
+</nav>
+</body></html>

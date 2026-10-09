@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand & Primary Palette (Invoicely Enterprise Design Spec) */
+  --color-primary: #004bca;
+  --color-primary-strong: #0061ff;
+  --color-primary-container: #eff4ff;
+  --color-on-primary-container: #001d4f;
+
+  /* Secondary & Tertiary Accents */
+  --color-secondary: #712ae2;
+  --color-secondary-container: #f3e8ff;
+  --color-tertiary: #007f57;
+  --color-tertiary-container: #e6f7f2;
+
+  /* Surface System */
+  --color-surface: #f8f9ff;
+  --color-surface-low: #eff4ff;
+  --color-surface-high: #ffffff;
+  --color-surface-tint: #e5eeff;
+  --color-sidebar: #213145;
+
+  /* Semantic Feedback Palette */
+  --color-success: #007f57;
+  --color-warning: #d97706;
+  --color-danger: #ba1a1a;
+  --color-info: #0284c7;
+
+  /* Typography & Outlines */
+  --color-text: #0b1c30;
+  --color-text-muted: #5a6072;
+  --color-outline: #c2c6d9;
+  --color-outline-variant: #e2e8f0;
+
+  --font-inter: 'Inter', sans-serif;
+  --font-manrope: 'Manrope', sans-serif;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Display Font Utility */
+.font-display {
+  font-family: var(--font-manrope);
+}
+
+/* Glassmorphism Card Style */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-panel-dark {
+  background: rgba(33, 49, 69, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
