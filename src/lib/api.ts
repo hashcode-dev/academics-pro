@@ -25,7 +25,7 @@ export async function fetchJson<T>(url: string, options: RequestInit = {}): Prom
       throw new Error(`API Error: ${res.statusText}`);
     }
     const json = await res.json();
-    return json.data;
+    return (json && typeof json === "object" && "data" in json) ? json.data : json;
   } catch (err) {
     // Fallback to local mock data if server isn't running
     console.warn(`Falling back to mock data for ${url}:`, err);
@@ -281,6 +281,65 @@ function getMockFallback<T>(url: string): T {
       status: "PUBLISHED",
       message: "Website feed successfully compiled and published for Apex High School",
     } as unknown as T;
+  }
+
+  if (url.includes("/people/students")) {
+    return mockStudents as unknown as T;
+  }
+
+  if (url.includes("/people/teachers")) {
+    return mockTeachers as unknown as T;
+  }
+
+  if (url.includes("/people/admissions/enquiry")) {
+    return {
+      confirmationNumber: "ENQ-APX-8492",
+      status: "SUCCESS",
+      message: "Admissions enquiry received. Our Dean of Admissions will contact you within 24 hours.",
+      submittedAt: new Date().toISOString(),
+    } as unknown as T;
+  }
+
+  if (url.includes("/schedule/matrix")) {
+    return {
+      tenantId: "apex-high",
+      totalSlots: mockTimetable.length,
+      totalConflicts: 0,
+      conflictFree: true,
+      slots: mockTimetable,
+    } as unknown as T;
+  }
+
+  if (url.includes("/schedule/slots")) {
+    return mockTimetable as unknown as T;
+  }
+
+  if (url.includes("/finance/summary")) {
+    return {
+      totalFeeTarget: 4500000.0,
+      collectedFees: 3890250.0,
+      pendingFees: 609750.0,
+      collectionRatePercentage: 86.45,
+      monthlyPayrollDisbursed: 285400.0,
+      defaultersCount: 14,
+    } as unknown as T;
+  }
+
+  if (url.includes("/finance/invoices")) {
+    return [
+      { id: "INV-2026-081", invoiceNumber: "INV-2026-081", studentName: "Julian Voss", student: "Julian Voss", grade: "Grade 11", amountDue: 8500, amountPaid: 8500, balance: 0, amount: "$8,500.00", dueDate: "Oct 15, 2026", status: "PAID", channel: "Online NetBanking" },
+      { id: "INV-2026-082", invoiceNumber: "INV-2026-082", studentName: "Sophia Chen", student: "Sophia Chen", grade: "Grade 11", amountDue: 8500, amountPaid: 8500, balance: 0, amount: "$8,500.00", dueDate: "Oct 15, 2026", status: "PAID", channel: "Credit Card Gateway" },
+      { id: "INV-2026-083", invoiceNumber: "INV-2026-083", studentName: "Liam O'Connor", student: "Liam O'Connor", grade: "Grade 10", amountDue: 7200, amountPaid: 0, balance: 7200, amount: "$7,200.00", dueDate: "Oct 15, 2026", status: "PENDING", channel: "Awaiting Cheque Clear" },
+      { id: "INV-2026-084", invoiceNumber: "INV-2026-084", studentName: "Mateo Alvarez", student: "Mateo Alvarez", grade: "Grade 9", amountDue: 7200, amountPaid: 1500, balance: 5700, amount: "$7,200.00", dueDate: "Sep 30, 2026", status: "OVERDUE", channel: "Installment Reminder Sent" },
+    ] as unknown as T;
+  }
+
+  if (url.includes("/finance/payroll")) {
+    return [
+      { id: "PAY-OCT-01", employee: "Dr. Arthur Vance", role: "Head of School", gross: "$12,500.00", deductions: "$2,100.00", net: "$10,400.00", status: "READY" },
+      { id: "PAY-OCT-02", employee: "Sarah Lin", role: "Academic Coordinator", gross: "$9,200.00", deductions: "$1,450.00", net: "$7,750.00", status: "READY" },
+      { id: "PAY-OCT-03", employee: "Marcus Brody", role: "Senior Physics Faculty", gross: "$8,400.00", deductions: "$1,300.00", net: "$7,100.00", status: "READY" },
+    ] as unknown as T;
   }
 
   return {} as T;
